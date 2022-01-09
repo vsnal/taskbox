@@ -7,9 +7,11 @@ import * as TaskListStories from './TaskList.stories'; //👈  Our stories impor
 const { WithPinnedTasks } = composeStories(TaskListStories);
 
 it('renders pinned tasks at the start of the list', () => {
-  const { container } = render(<WithPinnedTasks />);
+    const { container } = render(<WithPinnedTasks />);
 
-  expect(
-    container.querySelector('.list-item:nth-child(1) input[value="Task 6 (pinned)"]')
-  ).not.toBe(null);
+    expect(
+        container.querySelector(
+            '.list-item:nth-child(1) input[value="Task 6 (pinned)"]'
+        )
+    ).not.toBe(null);
 });
